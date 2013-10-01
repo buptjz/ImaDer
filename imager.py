@@ -10,9 +10,7 @@ import socket
 from tools import getTypeRequest,zh2unicode
 from BeautifulSoup import BeautifulSoup
 import time
-
-START = 20000
-END = 25000
+import sys
 
 class MutilThread(threading.Thread):
     def __init__(self,queue):
@@ -88,4 +86,7 @@ if __name__=='__main__':
     imageUrlList = []
     count = []
     tn = []
+    START = int(sys.argv[1])
+    END = int(sys.argv[2])
+    
     main()
